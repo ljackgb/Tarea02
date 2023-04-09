@@ -7,12 +7,35 @@ Original file is located at
     https://colab.research.google.com/drive/10rvfc-MNWMQE8d0JhnXysll1jTl7-Zyt
 """
 
-#Se importa el archivo, y asi poder hacer uso de la clase  
+#Se importa el archivo, y asi poder hacer uso de la clase
+
+"""
+Ni siquiera tienen un archivo llamado Taylor, pero eso no es lo peor, se pone el archivo correcto y listo,
+lo preocupante es lo que viene después. Decidieron crear una clase, y está tratando de usar un método de la clase
+cuando ni siquiera han creado una instancia, es decir, un objeto.
+
+
+Esta MUY MAL TODO EN ESTE SCRIPT!!!
+"""
 from Taylor import Calculo
 
 if __name__ == "__main__":
 # Se solicita un angulo al usuario
     angulo = int(input("Escribe un angulo:"))
+
+    """
+    Hay tres errores muy graves aquí:
+    
+    El primero es que definen una función llamada SenoTaylor(), esta función lo que hace es llamarse así misma,
+    es decir, crean un ciclo infinito donde se llama a la función una y otra vez porque no hace nada más.
+
+    El segundo error es que lo que buscan ni siquiera es crear esa función, sino llamar al método que crearon
+    de su clase, pero no han creado el objeto para poder llamar a la función.
+
+    El tercero es que ni siquiera llaman bien a su función en el print(), pues para llamar una función
+    deben escribir los paréntesis y agregar los parámetros si son necesarios, que en el caso de la función que crearon
+    es necesario los grados por lo menos.
+    """
     def SenoTaylor(grados,error=0.000001):
         senotaylor = SenoTaylor(angulo)
     #Se imprime el seno del angulo proporcionado    

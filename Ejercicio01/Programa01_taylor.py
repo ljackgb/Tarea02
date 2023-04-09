@@ -11,11 +11,28 @@ Original file is located at
 import math as m
 from decimal import Decimal
 #Definimos la clase que realizara nuestro cálculo
+
+"""
+1 punto
+También hay comentarios en el otro archivo
+
+"""
+"""
+No se pidió una clase, de hecho sólo era una función con una única tarea, por lo que no tiene sentido modelarlo
+como una clase.
+
+Pero bueno, suponiendo que lo modelan como una clase, falta el método constructor muy importante.
+"""
 class Calculo:
  
 #Condiciones del angulo
   def Tangulo(angulo):
     nAngulo = angulo
+    """
+    Falta el caso de menor que -360 (que se resuelve con un abs()) en el angulo.
+    De cualquier forma aunque si se reduce a un ángulo menor que 360 no neceariamente es el más cercano a 0°
+    por ejemplo 719° se reduciría a 359°, que sería lo mismo equivalente a  -1° y ese es el más cercano a 0°.
+    """
     if angulo >= 360:
       nAngulo = angulo-360
       Tangulo(nAngulo)
@@ -26,6 +43,9 @@ class Calculo:
 
 #Aproximación del senx con un E ≤ 0.000001
   def E(Sk,Sk1):
+    """
+    No hemos visto excepciones para usar esta estructura, aquí podían simplemente usar un if
+    """
     try:
       e = m.abs((Sk-Sk1)/Sk1)
     except:
@@ -42,6 +62,7 @@ class Calculo:
     extra = m.pow(x,((2*k)+1))
     nsen =(float(num/denom)*extra)+sen
     return nsen
+
 
 #Inicializamos los valores de 
   def SenoTaylor(grados,error=0.000001):

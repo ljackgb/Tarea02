@@ -1,3 +1,7 @@
+
+"""
+No tienen un archivo llamado clase_recta, tengan cudidado con eso
+"""
 from clase_recta import Recta
 
 if __name__ == "__main__":
@@ -9,10 +13,10 @@ if __name__ == "__main__":
     pendiente1= recta1.pendiente
     ordenada1 = recta1.ordenada_origen
 #Se escribe los parametros inciales
-  print("Los puntos ingresados son", punto1, punto2)
-  print("La ecuación de la recta es:", recta1)
-  print("La pendiente de la recta es:", pendiente1)
-  print("La ordenada al origen es:", ordenada1 ) 
+    print("Los puntos ingresados son", punto1, punto2)
+    print("La ecuación de la recta es:", recta1)
+    print("La pendiente de la recta es:", pendiente1)
+    print("La ordenada al origen es:", ordenada1 ) 
 
 #Menu adicional para el resto de funciones que se quieran realizar
     while(True):
